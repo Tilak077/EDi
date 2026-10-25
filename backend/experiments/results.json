@@ -1,0 +1,416 @@
+{
+  "meta": {
+    "template": "Evidence Research",
+    "fault_classes": [
+      "confidence",
+      "schema",
+      "provenance",
+      "privacy",
+      "freshness",
+      "budget"
+    ],
+    "repetitions_per_class": 30,
+    "wallet": 100.0,
+    "nominal_workflow_cost": 11,
+    "total_injections": 180
+  },
+  "e1_unit": [
+    {
+      "fault": "confidence",
+      "codes": [
+        "confidence"
+      ],
+      "pool_size": 1,
+      "chosen": "consensus-check",
+      "repair_cost": 2.0,
+      "residual_risk": 0.04,
+      "post_repair_codes": [],
+      "placeholder_fields": [],
+      "payload_changed": false,
+      "confidence_before": 0.1,
+      "confidence_after": 0.85,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "consensus-check",
+      "trace_steps": 7,
+      "credits_charged": 16.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 18.2
+    },
+    {
+      "fault": "schema",
+      "codes": [
+        "schema"
+      ],
+      "pool_size": 1,
+      "chosen": "schema-enricher",
+      "repair_cost": 1.0,
+      "residual_risk": 0.06,
+      "post_repair_codes": [],
+      "placeholder_fields": [
+        "evidence"
+      ],
+      "payload_changed": true,
+      "confidence_before": 0.89,
+      "confidence_after": 0.89,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "schema-enricher",
+      "trace_steps": 7,
+      "credits_charged": 15.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 9.1
+    },
+    {
+      "fault": "provenance",
+      "codes": [
+        "provenance"
+      ],
+      "pool_size": 1,
+      "chosen": "source-curator",
+      "repair_cost": 1.0,
+      "residual_risk": 0.05,
+      "post_repair_codes": [],
+      "placeholder_fields": [],
+      "payload_changed": false,
+      "confidence_before": 0.89,
+      "confidence_after": 0.89,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "source-curator",
+      "trace_steps": 7,
+      "credits_charged": 15.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 9.1
+    },
+    {
+      "fault": "privacy",
+      "codes": [
+        "privacy"
+      ],
+      "pool_size": 1,
+      "chosen": "privacy-redactor",
+      "repair_cost": 1.0,
+      "residual_risk": 0.03,
+      "post_repair_codes": [],
+      "placeholder_fields": [],
+      "payload_changed": false,
+      "confidence_before": 0.89,
+      "confidence_after": 0.89,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "privacy-redactor",
+      "trace_steps": 7,
+      "credits_charged": 15.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 9.1
+    },
+    {
+      "fault": "freshness",
+      "codes": [
+        "freshness"
+      ],
+      "pool_size": 1,
+      "chosen": "freshness-refresh",
+      "repair_cost": 2.0,
+      "residual_risk": 0.04,
+      "post_repair_codes": [],
+      "placeholder_fields": [],
+      "payload_changed": false,
+      "confidence_before": 0.89,
+      "confidence_after": 0.89,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "freshness-refresh",
+      "trace_steps": 7,
+      "credits_charged": 16.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 18.2
+    },
+    {
+      "fault": "budget",
+      "codes": [
+        "budget"
+      ],
+      "pool_size": 1,
+      "chosen": "context-compressor",
+      "repair_cost": 0.5,
+      "residual_risk": 0.09,
+      "post_repair_codes": [],
+      "placeholder_fields": [],
+      "payload_changed": false,
+      "confidence_before": 0.89,
+      "confidence_after": 0.89,
+      "end_to_end_repaired": true,
+      "end_to_end_candidate": "context-compressor",
+      "trace_steps": 7,
+      "credits_charged": 12.0,
+      "final_present": false,
+      "waiting_approval": true,
+      "overhead_pct": 4.5
+    }
+  ],
+  "e1_end_to_end": [
+    {
+      "fault": "confidence",
+      "detected_codes": [
+        "confidence"
+      ],
+      "candidates": 1,
+      "repair_applied": "consensus-check",
+      "post_repair_satisfied": true,
+      "placeholders": "-",
+      "payload_changed": false,
+      "confidence": "0.1->0.85",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 16.0,
+      "repair_overhead_pct": 18.2,
+      "rows_agree": 30
+    },
+    {
+      "fault": "schema",
+      "detected_codes": [
+        "schema"
+      ],
+      "candidates": 1,
+      "repair_applied": "schema-enricher",
+      "post_repair_satisfied": true,
+      "placeholders": "evidence",
+      "payload_changed": true,
+      "confidence": "0.89->0.89",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 15.0,
+      "repair_overhead_pct": 9.1,
+      "rows_agree": 30
+    },
+    {
+      "fault": "provenance",
+      "detected_codes": [
+        "provenance"
+      ],
+      "candidates": 1,
+      "repair_applied": "source-curator",
+      "post_repair_satisfied": true,
+      "placeholders": "-",
+      "payload_changed": false,
+      "confidence": "0.89->0.89",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 15.0,
+      "repair_overhead_pct": 9.1,
+      "rows_agree": 30
+    },
+    {
+      "fault": "privacy",
+      "detected_codes": [
+        "privacy"
+      ],
+      "candidates": 1,
+      "repair_applied": "privacy-redactor",
+      "post_repair_satisfied": true,
+      "placeholders": "-",
+      "payload_changed": false,
+      "confidence": "0.89->0.89",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 15.0,
+      "repair_overhead_pct": 9.1,
+      "rows_agree": 30
+    },
+    {
+      "fault": "freshness",
+      "detected_codes": [
+        "freshness"
+      ],
+      "candidates": 1,
+      "repair_applied": "freshness-refresh",
+      "post_repair_satisfied": true,
+      "placeholders": "-",
+      "payload_changed": false,
+      "confidence": "0.89->0.89",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 16.0,
+      "repair_overhead_pct": 18.2,
+      "rows_agree": 30
+    },
+    {
+      "fault": "budget",
+      "detected_codes": [
+        "budget"
+      ],
+      "candidates": 1,
+      "repair_applied": "context-compressor",
+      "post_repair_satisfied": true,
+      "placeholders": "-",
+      "payload_changed": false,
+      "confidence": "0.89->0.89",
+      "end_to_end_repaired": true,
+      "trace_steps": 7,
+      "credits": 12.0,
+      "repair_overhead_pct": 4.5,
+      "rows_agree": 30
+    }
+  ],
+  "e2_gate_ablation": [
+    {
+      "fault": "confidence",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 16.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    },
+    {
+      "fault": "schema",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 15.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    },
+    {
+      "fault": "provenance",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 15.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    },
+    {
+      "fault": "privacy",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 15.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    },
+    {
+      "fault": "freshness",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 16.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    },
+    {
+      "fault": "budget",
+      "off_violations": 1,
+      "off_consumed": true,
+      "off_repairs": 0,
+      "off_credits": 11.0,
+      "on_violations": 1,
+      "on_consumed": false,
+      "on_repairs": 1,
+      "on_credits": 12.0,
+      "off_status": "completed",
+      "on_status": "completed"
+    }
+  ],
+  "e3_compound": [
+    {
+      "codes": [
+        "confidence",
+        "schema"
+      ],
+      "candidate_pool": 0,
+      "selection": "none",
+      "execution_blocked": true,
+      "status": "repair unavailable",
+      "message": "Contract repair unavailable"
+    },
+    {
+      "codes": [
+        "confidence",
+        "provenance"
+      ],
+      "candidate_pool": 0,
+      "selection": "none",
+      "execution_blocked": true,
+      "status": "repair unavailable",
+      "message": "Contract repair unavailable"
+    },
+    {
+      "codes": [
+        "privacy",
+        "schema"
+      ],
+      "candidate_pool": 0,
+      "selection": "none",
+      "execution_blocked": true,
+      "status": "repair unavailable",
+      "message": "Contract repair unavailable"
+    }
+  ],
+  "e4_selection": [
+    {
+      "rule": "weighted (proposed)",
+      "selected": "privacy-scrubbing",
+      "cost": 1.2,
+      "latency": 2.0,
+      "privacy_risk": 0.0,
+      "residual_failure_risk": 0.09,
+      "score": 2.14
+    },
+    {
+      "rule": "least cost",
+      "selected": "cheap-repair",
+      "cost": 0.5,
+      "latency": 1.0,
+      "privacy_risk": 0.0,
+      "residual_failure_risk": 0.3,
+      "score": 2.5
+    },
+    {
+      "rule": "least residual risk",
+      "selected": "thorough-recompute",
+      "cost": 3.0,
+      "latency": 1.0,
+      "privacy_risk": 0.05,
+      "residual_failure_risk": 0.02,
+      "score": 3.52
+    },
+    {
+      "rule": "first feasible (catalogue order)",
+      "selected": "thorough-recompute",
+      "cost": 3.0,
+      "latency": 1.0,
+      "privacy_risk": 0.05,
+      "residual_failure_risk": 0.02,
+      "score": 3.52
+    }
+  ],
+  "e5_healthy": {
+    "healthy_runs": 30,
+    "repairs": 0,
+    "violations": 0,
+    "credits": 11.0
+  }
+}

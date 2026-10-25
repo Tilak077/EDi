@@ -1,0 +1,5 @@
+rule,selected,cost,latency,privacy_risk,residual_failure_risk,score
+weighted (proposed),privacy-scrubbing,1.2,2.0,0.0,0.09,2.14
+least cost,cheap-repair,0.5,1.0,0.0,0.3,2.5
+least residual risk,thorough-recompute,3.0,1.0,0.05,0.02,3.52
+first feasible (catalogue order),thorough-recompute,3.0,1.0,0.05,0.02,3.52

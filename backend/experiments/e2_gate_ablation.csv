@@ -1,0 +1,7 @@
+fault,off_violations,off_consumed,off_repairs,off_credits,on_violations,on_consumed,on_repairs,on_credits,off_status,on_status
+confidence,1,True,0,11.0,1,False,1,16.0,completed,completed
+schema,1,True,0,11.0,1,False,1,15.0,completed,completed
+provenance,1,True,0,11.0,1,False,1,15.0,completed,completed
+privacy,1,True,0,11.0,1,False,1,15.0,completed,completed
+freshness,1,True,0,11.0,1,False,1,16.0,completed,completed
+budget,1,True,0,11.0,1,False,1,12.0,completed,completed

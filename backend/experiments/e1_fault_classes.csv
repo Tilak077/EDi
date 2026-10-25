@@ -1,0 +1,7 @@
+fault,detected_codes,candidates,repair_applied,post_repair_satisfied,placeholders,payload_changed,confidence,end_to_end_repaired,trace_steps,credits,repair_overhead_pct,rows_agree
+confidence,['confidence'],1,consensus-check,True,-,False,0.1->0.85,True,7,16.0,18.2,30
+schema,['schema'],1,schema-enricher,True,evidence,True,0.89->0.89,True,7,15.0,9.1,30
+provenance,['provenance'],1,source-curator,True,-,False,0.89->0.89,True,7,15.0,9.1,30
+privacy,['privacy'],1,privacy-redactor,True,-,False,0.89->0.89,True,7,15.0,9.1,30
+freshness,['freshness'],1,freshness-refresh,True,-,False,0.89->0.89,True,7,16.0,18.2,30
+budget,['budget'],1,context-compressor,True,-,False,0.89->0.89,True,7,12.0,4.5,30
